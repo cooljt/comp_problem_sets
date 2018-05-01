@@ -14,6 +14,9 @@ public class EightQueen {
     }
   }
 
+  /**
+   * Solve the eight queen problem using backtracking algorithm.
+   */
   public void solve() {
     int current_row = 0;
     int col;
@@ -33,6 +36,13 @@ public class EightQueen {
     }
   }
 
+  /**
+   * Check if the (row, col) is a valid place in the chessboard.
+   * @param queens the chessboard of the existing queens.
+   * @param row the row of the new placement.
+   * @param col the col of the new placement.
+   * @return true if the placement if valid otherwise false.s
+   */
   public boolean safe(int[] queens, int row, int col) {
     if (col < 0) {
       return false;
@@ -52,6 +62,10 @@ public class EightQueen {
     return true;
   }
 
+  /**
+   * Return the string representation of the solution of the problem.
+   * @return the string representation.
+   */
   public String toString() {
     StringBuilder board = new StringBuilder();
     for (int i = 0; i < queens.length; i++) {
